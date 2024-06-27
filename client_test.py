@@ -19,7 +19,7 @@ class ClientTest(unittest.TestCase):
     ]
     for quote in quotes:
       stock, bid_price, ask_price, price = getDataPoint(quote)
-      expected_price = (bid_price + ask_price) / 2
+      expected_price = (bid_price + ask_price) / 2 #expected price form
       self.assertEqual(price, expected_price)
 
       def test_getRatio(self):

@@ -41,14 +41,14 @@ def getDataPoint(quote):
 
 def getRatio(price_a, price_b):
     if price_b == 0:
-        # Avoid division by zero
+
         return None
     return price_a / price_b
 
 
 # Main
 if __name__ == "__main__":
-    # Query the price once every N seconds.
+
     for _ in iter(range(N)):
         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
 
